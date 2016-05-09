@@ -1,0 +1,107 @@
+.banner {
+    text-align: center;
+    padding: 10em 0 14em 0;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+#bio {
+    background-color: #00BCD4;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .container {
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+    }
+    .ng-hide {
+        height: 0em !important;
+        @include transition(height, 1s, ease, null);
+    }
+    .btn-link {
+        color: #FFF;
+    }
+    #courses {
+        overflow: hidden;
+        height: 22em;
+        padding: 0 0.2em;
+        @include transition(height, 1s, ease, null);
+        .nav-tabs {
+            border-bottom: 0;
+            a {
+                margin: 0;
+                background-color: transparent;
+                border: 0;
+                color: #333;
+                border-radius: 0;
+                &:hover {
+                    color: #333;
+                    cursor: pointer;
+                    background-color: #F5F5F5;
+                }
+            }
+            .active {
+                background-color: #F5F5F5;
+            }
+        }
+        .table-container {
+            padding: 0.5em;
+            background-color: #F5F5F5;
+            @include card-shadow;
+            .course-table {
+                font-size: 0.9em;
+                background-color: #F5F5F5;
+                margin-bottom: 0;
+                .course-col {
+                    width: 7em;
+                }
+            }
+            .table-body {
+                background-color: #F5F5F5;
+                max-height: 15em;
+                overflow-y: scroll;
+                tr:first-of-type td {
+                    border-top: 0;
+                }
+                &::-webkit-scrollbar-track {
+                    background-color: transparent;
+                }
+                &::-webkit-scrollbar {
+                    background-color: transparent;
+                    width: 6px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: rgba(217, 218, 215, 0.7);
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+#body-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 0.4em;
+    padding: 2em;
+}
+
+.card {
+    display: block;
+    position: relative;
+    background-color: #F5F5F5;
+    @include card-shadow;
+}
+
+.card-img {
+    display: block;
+    width: 100%;
+    border: 0;
+}
+
+.card-block {
+    padding: 1em;
+    border-top: 1px solid rgba(51,51,51,0.2);
+}

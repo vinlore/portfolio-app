@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+$font-family-base: 'Roboto';
+
+$font-size-base: 14px !default;
+$font-size-lg: 1.25rem !default;
+$font-size-sm: .875rem !default;
+$font-size-xs: .75rem !default;
+
+$font-size-h1: 4rem !default;
+$font-size-h2: 3rem !default;
+$font-size-h3: 2.5rem !default;
+$font-size-h4: 2rem !default;
+$font-size-h5: 1.75rem !default;
+$font-size-h6: 1.5rem !default;
+
+$grid-breakpoints: ( xs: 320px, sm: 481px, md: 641px, lg: 961px, xl: 1025px, xxl: 1281px) !default;
+
+$screen-xs: map-get($grid-breakpoints, xs);
+$screen-sm: map-get($grid-breakpoints, sm);
+$screen-md: map-get($grid-breakpoints, md);
+$screen-lg: map-get($grid-breakpoints, lg);
+$screen-xlg: map-get($grid-breakpoints, xl);
+$screen-xxlg: map-get($grid-breakpoints, xxl);
+
+$container-sm: 30em;
+$container-md: 45em;
+$container-lg: 71.25em;
+
+$card-box: 0px 3px 3px 0px rgba(94,94,94,0.8);

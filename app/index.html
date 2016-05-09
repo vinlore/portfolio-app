@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Vincent Lore</title>
+    <base href="/">
+
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+</head>
+<body>
+
+    <div ng-app="app">
+        <ng-include src="'shared/header.html'"></ng-include>
+        <div ng-view autoscroll="true"></div>
+    </div>
+    
+    <script src="assets/libs/angular/angular.min.js"></script>
+    <script src="assets/libs/angular-route/angular-route.min.js"></script>
+    <script src="assets/libs/angular-animate/angular-animate.min.js"></script>
+    <script src="assets/libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="components/home/HomeCtrl.js"></script>
+
+</body>

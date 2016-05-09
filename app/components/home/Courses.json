@@ -1,0 +1,78 @@
+[
+    {
+        "course": "CPSC 418",
+        "title": "Parallel Computation"
+    },
+    {
+        "course": "CPSC 410",
+        "title": "Advanced Software Engineering"
+    },
+    {
+        "course": "CPSC 404",
+        "title": "Advanced Relational Databases"
+    },
+    {
+        "course": "CPSC 340",
+        "title": "Machine Learning and Data Mining"
+    },
+    {
+        "course": "CPSC 320",
+        "title": "Intermediate Algorithm Design and Analysis"
+    },
+    {
+        "course": "CPSC 319",
+        "title": "Software Engineering Project"
+    },
+    {
+        "course": "CPSC 313",
+        "title": "Computer Hardware and Operating Systems"
+    },
+    {
+        "course": "CPSC 310",
+        "title": "Introduction to Software Engineering"
+    },
+    {
+        "course": "CPSC 304",
+        "title": "Introduction to Relational Databases"
+    },
+    {
+        "course": "BIOC 450",
+        "title": "Membrane Biochemistry"
+    },
+    {
+        "course": "BIOC 410",
+        "title": "Nucleic Acids - Structure and Function"
+    },
+    {
+        "course": "BIOC 403",
+        "title": "Enzymology"
+    },
+    {
+        "course": "BIOC 402",
+        "title": "Proteins - Structure and Function"
+    },
+    {
+        "course": "BIOC 303",
+        "title": "Molecular Biochemistry"
+    },
+    {
+        "course": "BIOC 301",
+        "title": "Biochemistry Laboratory"
+    },
+    {
+        "course": "CHEM 335",
+        "title": "Chemistry Integrated Laboratory II"
+    },
+    {
+        "course": "CHEM 315",
+        "title": "Chemistry Integrated Laboratory I"
+    },
+    {
+        "course": "CHEM 313",
+        "title": "Advanced Organic Chemistry for the Life Sciences"
+    },
+    {
+        "course": "CHEM 305",
+        "title": "Biophysical Chemistry"
+    }
+]
