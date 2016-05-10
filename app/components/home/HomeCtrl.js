@@ -7,6 +7,8 @@ app.controller('HomeCtrl', function (filterFilter, $http) {
     vm.queryCourses = '';
     vm.courses = [];
     vm.isCourses = true;
+    vm.isIntro = true;
+    vm.isEducation = true;
 
     vm.loadCourses = function () {
         $http.get('components/home/Courses.json').success(data => 

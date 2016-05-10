@@ -1,15 +1,15 @@
 <div id="home" ng-init="vm.loadCourses()">
     <section id="bio">
-        <div class="container" id="intro">
-            <div class="col-lg-6">
+        <div class="container">
+            <div class="col-lg-6" id="intro" ng-show="vm.isIntro">
                 <h5>I'm a new UBC graduate specialized in front-end web development, with a great deal of experience using AngularJS. Currently, I'm seeking entry-level web development positions.</h5>
             </div>
-            <div class="col-lg-6" id="education">
+            <div class="col-lg-6" id="education" ng-show="vm.isEducation">
                 <div class="row">
                     <div class="col-xs-3">
                         <img class="img-responsive" src="assets/img/ubc.png" />
                     </div>
-                    <div class="col-xs-9">
+                <div class="col-xs-9">
                         <h4>University of British Columbia</h4>
                         <h6>Bachelor of Science</h6>
                         <h6>Major in Biochemistry</h6>
@@ -80,4 +80,5 @@
             </div>
         </div>
     </div>
+    <button id="project-btn" class="btn btn-block btn-link" ng-click="vm.isIntro = !vm.isIntro; vm.isEducation = !vm.isEducation">Project Portfolio <span class="caret"></span></button>
 </div>

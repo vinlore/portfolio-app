@@ -12,6 +12,13 @@ module.exports = function (grunt) {
                 }
             }
         },
+        connect: {
+            dev: {
+                options: {
+                    base: 'app'
+                }
+            }
+        },
         watch: {
             sass: {
                 files: ['app/assets/sass/*.scss'],
@@ -25,7 +32,8 @@ module.exports = function (grunt) {
             }
         }
     });
-    grunt.registerTask('default', ['sass:dist', 'watch']);
+    grunt.registerTask('default', ['connect', 'watch']);
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 }

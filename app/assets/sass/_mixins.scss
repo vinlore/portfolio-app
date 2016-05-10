@@ -25,9 +25,31 @@
     box-shadow: $card-box;
 }
 
-@mixin transition($prop, $time, $fn, $delay) {
-    -webkit-transition: $prop $time $fn $delay;
-    -moz-transition: $prop $time $fn $delay;
-    -o-transition: $prop $time $fn $delay;
-    transition: $prop $time $fn $delay;
+@mixin transition($transit) {
+    -webkit-transition: $transit;
+    -moz-transition: $transit;
+    -o-transition: $transit;
+    transition: $transit;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-o-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin animation($animate) {
+    -webkit-animation: $animate;
+    -moz-animation: $animate;
+    -o-animation: $animate;
+    transition: $animate
 }
