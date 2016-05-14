@@ -14,6 +14,12 @@
 }
 
 #home {
+    @include max-widths(lg) {
+        overflow-y: auto;
+        .col-xlg-6 {
+            margin-bottom: 2em;
+        }
+    }
     overflow: hidden;
     background-color: #00BCD4;
     height: 100vh;
@@ -22,7 +28,7 @@
     .container {
         display: flex;
         align-items: center;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
     }
     .btn-link {
         color: #FFF;
@@ -99,6 +105,33 @@
             }
         }
     }
+    #projects {
+        @include response-widths(xlg) {
+            .card-sm {
+                height: 14.18em;
+            }
+        }
+        @include max-widths(lg) {
+            padding-top: 60em;
+            padding-bottom: 5em;
+            .col-xlg-8, .col-xlg-4 {
+                margin-bottom: 2em;
+            }
+            .card {
+                overflow: hidden;
+                height: 30em;
+            }
+        }
+        #yippee-card {
+            img {
+                transform: translate(12%, -7%);
+                width: 80%;
+            }
+        }
+        #primus-card {  
+            margin-top: 2em;
+        }
+    }
 }
 
 @for $i from 1 through 3 {
@@ -121,15 +154,8 @@
         border: 0;
     }
     &.card-sm {
-        height: 20em;
-        overflow: hidden; 
-    }
-    &#yippee-card {
-        margin-bottom: 2.714em;
-        img {
-            transform: translate(12%, -7%);
-            width: 80%;
-        }
+        height: 19.75em;
+        overflow: hidden;
     }
     .card-img-overlay {
         position: absolute;

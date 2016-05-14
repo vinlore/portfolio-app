@@ -1,5 +1,6 @@
 <section id="home" ng-init="vm.loadCourses()">
     <div class="container">
+    <div>
         <div class="col-xlg-6" id="bio" ng-show="vm.showBio">
             <h5>I'm a new UBC graduate specialized in front-end web development, with a great deal of experience using AngularJS. Currently, I'm seeking entry-level web development positions.</h5>
         </div>
@@ -46,7 +47,8 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        </div>
+        <div id="projects">
             <div class="col-xlg-8">
                 <div class="card card-1" id="huddle-card" ng-show="vm.showProjects">
                     <img src="assets/img/huddle/home.png" class="card-img">

@@ -22,6 +22,27 @@
     }
 }
 
+@mixin max-widths($width) {
+    @if $width == xs {
+        @media (max-width: $screen-sm - 1) { @content; }
+    }
+    @else if $width == sm {
+        @media (max-width: $screen-md - 1) { @content; }
+    }
+    @else if $width == md {
+        @media (max-width: $screen-lg - 1) { @content; }
+    }
+    @else if $width == lg {
+        @media (max-width: $screen-xlg - 1) { @content; }
+    }
+    @else if $width == xlg {
+        @media (max-width: $screen-xxlg - 1) { @content; }
+    }
+    @else if $width == xxlg {
+        @media (max-width: $screen-wd - 1) { @content; }
+    }
+}
+
 @mixin card-shadow {
     -webkit-box-shadow: $card-box;
     -moz-box-shadow: $card-box;
