@@ -9,11 +9,12 @@
 
 #project-btn {
     position: absolute;
-    bottom: 1em;
-    color: #FFF;
+    bottom: 10%;
+    left: 0;
 }
 
-#bio {
+#home {
+    overflow: hidden;
     background-color: #00BCD4;
     height: 100vh;
     display: flex;
@@ -26,16 +27,16 @@
     .btn-link {
         color: #FFF;
     }
-    #intro {
-        animation: fade-in 1s ease-in;
+    #bio {
+        @include animation(fade-in 1s ease-in);
         &.ng-hide {
-            -webkit-animation: fade-out 1s ease-in;
+            @include animation(fade-out-left 1s ease);
         }
     }
     #education {
-        animation: fade-in 1s ease-in 0.7s both;
+        @include animation(fade-in 1s ease-in both);
         &.ng-hide {
-            -webkit-animation: fade-out 1s ease-in;
+            @include animation(fade-out-right 1s ease);
         }
         #courses {
             overflow: hidden;
@@ -100,26 +101,49 @@
     }
 }
 
-#body-container {
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 0.4em;
-    padding: 2em;
+@for $i from 1 through 3 {
+    .card-#{$i} {
+        @include animation(zoom-in 400ms ease-in $i*0.3s both);
+    }
+    .card-#{$i}.ng-hide {
+        @include animation(zoom-out 400ms ease-in (4-$i)*0.3s);
+    }
 }
 
 .card {
     display: block;
     position: relative;
-    background-color: #F5F5F5;
+    background-color: #FFF;
     @include card-shadow;
-}
-
-.card-img {
-    display: block;
-    width: 100%;
-    border: 0;
-}
-
-.card-block {
-    padding: 1em;
-    border-top: 1px solid rgba(51, 51, 51, 0.2);
+    .card-img {
+        display: block;
+        width: 100%;
+        border: 0;
+    }
+    &.card-sm {
+        height: 20em;
+        overflow: hidden; 
+    }
+    &#yippee-card {
+        margin-bottom: 2.714em;
+        img {
+            transform: translate(12%, -7%);
+            width: 80%;
+        }
+    }
+    .card-img-overlay {
+        position: absolute;
+        background-color: rgba(51, 51, 51, 0.6);
+        color: #FFF;
+        padding: 1em;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        @include transition(opacity 0.3s ease-in);
+        &:hover {
+            opacity: 1;
+        }
+    }
 }

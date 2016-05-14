@@ -4,5 +4,6 @@
     @include response-widths(md) { width: 50em; }
     @include response-widths(lg) { width: 55em; }
     @include response-widths(xlg) { width: 60em; }
-    @include response-widths(xxlg) { width: 75em; }
+    @include response-widths(xxlg) { width: 80em; }
+    @include response-widths(wd) { width: 90em; }
 }

@@ -1,84 +1,79 @@
-<div id="home" ng-init="vm.loadCourses()">
-    <section id="bio">
-        <div class="container">
-            <div class="col-lg-6" id="intro" ng-show="vm.isIntro">
-                <h5>I'm a new UBC graduate specialized in front-end web development, with a great deal of experience using AngularJS. Currently, I'm seeking entry-level web development positions.</h5>
-            </div>
-            <div class="col-lg-6" id="education" ng-show="vm.isEducation">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <img class="img-responsive" src="assets/img/ubc.png" />
-                    </div>
-                <div class="col-xs-9">
-                        <h4>University of British Columbia</h4>
-                        <h6>Bachelor of Science</h6>
-                        <h6>Major in Biochemistry</h6>
-                        <h6>Major in Computer Science</h6>
-                        <h6>September 2011 to May 2016</h6>
-                    </div>
+<section id="home" ng-init="vm.loadCourses()">
+    <div class="container">
+        <div class="col-xlg-6" id="bio" ng-show="vm.showBio">
+            <h5>I'm a new UBC graduate specialized in front-end web development, with a great deal of experience using AngularJS. Currently, I'm seeking entry-level web development positions.</h5>
+        </div>
+        <div class="col-xlg-6" id="education" ng-show="vm.showEducation">
+            <div class="row">
+                <div class="col-xs-3">
+                    <img class="img-responsive" src="assets/img/ubc.png" />
                 </div>
-                <button class="btn btn-block btn-link" ng-click="vm.isCourses = !vm.isCourses">Completed Courses <span class="caret"></span></button>
-                <div id="courses" ng-hide="vm.isCourses">
-                    <uib-tabset>
-                        <uib-tab heading="ALL" active="tab.active" select="vm.queryCourses = ''"></uib-tab>
-                        <uib-tab heading="CPSC" select="vm.queryCourses = 'cpsc'"></uib-tab>
-                        <uib-tab heading="BIOC" select="vm.queryCourses = 'bioc'"></uib-tab>
-                        <uib-tab heading="CHEM" select="vm.queryCourses = 'chem'"></uib-tab>
-                    </uib-tabset>
-                    <div class="table-container">
+                <div class="col-xs-9">
+                    <h4>University of British Columbia</h4>
+                    <h6>Bachelor of Science</h6>
+                    <h6>Major in Biochemistry</h6>
+                    <h6>Major in Computer Science</h6>
+                    <h6>September 2011 to May 2016</h6>
+                </div>
+            </div>
+            <button class="btn btn-block btn-link" ng-click="vm.showCourses = !vm.showCourses">Completed Courses <span class="caret"></span></button>
+            <div id="courses" ng-hide="vm.showCourses">
+                <uib-tabset>
+                    <uib-tab heading="ALL" active="tab.active" select="vm.queryCourses = ''"></uib-tab>
+                    <uib-tab heading="CPSC" select="vm.queryCourses = 'cpsc'"></uib-tab>
+                    <uib-tab heading="BIOC" select="vm.queryCourses = 'bioc'"></uib-tab>
+                    <uib-tab heading="CHEM" select="vm.queryCourses = 'chem'"></uib-tab>
+                </uib-tabset>
+                <div class="table-container">
+                    <table class="table table-hover course-table">
+                        <thead>
+                            <tr>
+                                <th class="course-col">Course</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="table-body">
                         <table class="table table-hover course-table">
-                            <thead>
-                                <tr>
-                                    <th class="course-col">Course</th>
-                                    <th>Description</th>
+                            <tbody>
+                                <tr ng-repeat="c in vm.courses | filter: {course: vm.queryCourses}">
+                                    <td class="course-col">{{c.course}}</td>
+                                    <td>{{c.title}}</td>
                                 </tr>
-                            </thead>
+                            </tbody>
                         </table>
-                        <div class="table-body">
-                            <table class="table table-hover course-table">
-                                <tbody>
-                                    <tr ng-repeat="c in vm.courses | filter: {course: vm.queryCourses}">
-                                        <td class="course-col">{{c.course}}</td>
-                                        <td>{{c.title}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <div class="container" id="body-container">
         <div class="row">
-            <div class="col-lg-6 col-xlg-4">
-                <div class="card">
-                    <img src="assets/img/yippee/studyhome.png" class="card-img">
-                    <div class="card-block">
+            <div class="col-xlg-8">
+                <div class="card card-1" id="huddle-card" ng-show="vm.showProjects">
+                    <img src="assets/img/huddle/home.png" class="card-img">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Huddle</h4>
+                        <p class="card-text">Exceptionally flexible platform built for Gobind Sarvar, a non-for-profit learning institute, to manage their international conferences and events.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xlg-4">
+                <div class="card card-sm card-2" id="yippee-card" ng-show="vm.showProjects">
+                    <img src="assets/img/yippee/studytimer.png" class="card-img">
+                    <div class="card-img-overlay"> 
                         <h4 class="card-title">Yippee</h4>
                         <p class="card-text">An Ionic application that encourages you to live a healthy lifestyle by scheduling breaks into your busy schedule.</p>
                     </div>
                 </div>
             </div>
             <div class="col-xlg-4">
-                <div class="card">
+                <div class="card card-sm card-3" id="primus-card" ng-show="vm.showProjects">
                     <img src="assets/img/primus/home.png" class="card-img">
-                    <div class="card-block">
+                    <div class="card-img-overlay">
                         <h4 class="card-title">Primus</h4>
                         <p class="card-text">Web application for simplifying administrative tasks at Datapi Learning Centre.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-xlg-4">
-                <div class="card">
-                    <img src="assets/img/huddle/home.png" class="card-img">
-                    <div class="card-block">
-                        <h4 class="card-title">Huddle</h4>
-                        <p class="card-text">Exceptionally flexible platform built for Gobind Sarvar, a non-for-profit learning institute, to manage their international conferences and events.</p>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-    <button id="project-btn" class="btn btn-block btn-link" ng-click="vm.isIntro = !vm.isIntro; vm.isEducation = !vm.isEducation">Project Portfolio <span class="caret"></span></button>
-</div>
+        <button id="project-btn" class="btn btn-block btn-link" ng-click="vm.toggleProjects()">Project Portfolio <span class="caret"></span></button>
+</section>

@@ -15,7 +15,10 @@
         @media (min-width: $screen-xlg) and (max-width: $screen-xxlg - 1) { @content; }
     }
     @else if $width == xxlg {
-        @media (min-width: $screen-xxlg) { @content; }
+        @media (min-width: $screen-xxlg) and (max-width: $screen-wd - 1) { @content; }
+    }
+    @else if $width == wd {
+        @media (min-width: $screen-wd) { @content; }
     }
 }
 
@@ -52,4 +55,11 @@
     -moz-animation: $animate;
     -o-animation: $animate;
     transition: $animate
+}
+
+@mixin transform($trans) {
+    -webkit-transform: $trans;
+    -moz-transform: $trans;
+    -o-transform: $trans;
+    transform: $trans;
 }
