@@ -14,10 +14,15 @@
 }
 
 #home {
-    @include max-widths(lg) {
+    @include max-widths(xlg) {
+        align-items: baseline;
         overflow-y: auto;
         .col-xlg-6 {
             margin-bottom: 2em;
+        }
+        .container {
+            padding-top: 10em;
+            align-items: baseline;
         }
     }
     overflow: hidden;
@@ -108,11 +113,10 @@
     #projects {
         @include response-widths(xlg) {
             .card-sm {
-                height: 14.18em;
+                height: 16.95em;
             }
         }
-        @include max-widths(lg) {
-            padding-top: 60em;
+        @include max-widths(xlg) {
             padding-bottom: 5em;
             .col-xlg-8, .col-xlg-4 {
                 margin-bottom: 2em;
@@ -120,6 +124,16 @@
             .card {
                 overflow: hidden;
                 height: 30em;
+            }
+        }
+        @include max-widths(md) {
+            .card {
+                max-height: 20em;
+            }
+        }
+        @include max-widths(sm) {
+            .card {
+                max-height: 13em;
             }
         }
         #yippee-card {

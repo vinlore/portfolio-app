@@ -24,22 +24,22 @@
 
 @mixin max-widths($width) {
     @if $width == xs {
-        @media (max-width: $screen-sm - 1) { @content; }
+        @media (max-width: $screen-xs) { @content; }
     }
     @else if $width == sm {
-        @media (max-width: $screen-md - 1) { @content; }
+        @media (max-width: $screen-sm) { @content; }
     }
     @else if $width == md {
-        @media (max-width: $screen-lg - 1) { @content; }
+        @media (max-width: $screen-md) { @content; }
     }
     @else if $width == lg {
-        @media (max-width: $screen-xlg - 1) { @content; }
+        @media (max-width: $screen-lg) { @content; }
     }
     @else if $width == xlg {
-        @media (max-width: $screen-xxlg - 1) { @content; }
+        @media (max-width: $screen-xlg) { @content; }
     }
     @else if $width == xxlg {
-        @media (max-width: $screen-wd - 1) { @content; }
+        @media (max-width: $screen-xxlg) { @content; }
     }
 }
 
