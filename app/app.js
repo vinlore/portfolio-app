@@ -1,22 +1,34 @@
 'use strict';
 
 angular.module('app', [
-    'ngRoute',
+    'ui.router',
     'ui.bootstrap',
     'ngAnimate',
     'HomeCtrl'
 ])
 
-.config(function ($routeProvider, $locationProvider) {
+.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-    $routeProvider
-    .when('/', {
+    $stateProvider
+    .state('home', {
+        url:'',
+        abstract: true,
+        templateUrl: 'shared/header.html'
+    })
+
+    .state('home.bio', {
+        url: '/',
         controller: 'HomeCtrl',
         templateUrl: 'components/home/home.html',
         controllerAs: 'vm'
     })
 
-    .otherwise({redirectTo: '/'});
+    .state('home.portfolio', {
+        url: '/portfolio',
+        templateUrl: 'components/home/portfolio.html'
+    })
+
+    $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);
 

@@ -1,0 +1,80 @@
+#content {
+    &.ng-enter {
+        #portfolio {
+            background-color: $home-color;
+        }
+    }
+    &.ng-enter-active {
+        #portfolio {
+            background-color: $portfolio-color;
+            @include transition(background-color 500ms linear 1.3s);
+        }
+    }
+    @for $i from 1 through 3 {
+        &.ng-leave {
+            .card-#{$i} {
+                @include animation(zoom-out 400ms ease-in (4-$i)*0.3s both);
+            }
+        }
+    }
+}
+
+#portfolio {
+    @include max-widths(xlg) {
+        align-items: baseline;
+        overflow-y: auto;
+        .col-xlg-6 {
+            margin-bottom: 2em;
+        }
+        .container {
+            padding-top: 8em;
+            align-items: baseline;
+        }
+    }
+    overflow: hidden;
+    background-color: $portfolio-color;
+    height: 100vh;
+    display: flex;
+    padding-top: 7em;
+    @include response-widths(xlg) {
+        .card-sm {
+            height: 17.58em;
+        }
+    }
+    @include max-widths(xlg) {
+        padding-top: 0em;
+        padding-bottom: 5em;
+        .col-xlg-8,
+        .col-xlg-4 {
+            margin-bottom: 2em;
+        }
+        .card {
+            overflow: hidden;
+            height: 30em;
+        }
+    }
+    @include max-widths(md) {
+        .card {
+            max-height: 20em;
+        }
+    }
+    @include max-widths(sm) {
+        .card {
+            max-height: 13em;
+        }
+    }
+    #yippee-card {
+        img {
+            transform: translate(12%, -7%);
+            width: 80%;
+        }
+    }
+    #primus-card {
+        margin-top: 2em;
+    }
+    @for $i from 1 through 3 {
+        .card-#{$i} {
+            @include animation(zoom-in 400ms ease-in 1s+$i*0.3s both);
+        }
+    }
+}

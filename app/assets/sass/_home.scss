@@ -1,54 +1,65 @@
-.banner {
-    text-align: center;
-    padding: 10em 0 14em 0;
-}
-
-.btn:focus {
-    outline: none;
-}
-
-#project-btn {
+#content {
     position: absolute;
-    bottom: 10%;
+    top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    &.ng-enter {
+        @include transition(opacity 1s ease-in 1.5s);
+        #home {
+            background-color: $portfolio-color;
+        }
+        #bio {
+            @include animation(fade-in 1s ease-in 1.5s both);
+        }
+        #education {
+            @include animation(fade-in 1s ease-in 1.5s both);
+        }
+    }
+    &.ng-enter-active {
+        #home {
+            background-color: $home-color;
+            @include transition(background-color 500ms linear 1.3s);
+        }
+    }
+    &.ng-leave {
+        @include transition(opacity 700ms ease);
+        @include transition(transform 700ms ease);
+        #bio {
+            @include animation(fade-out-left 1s ease both);
+        }
+        #education {
+            @include animation(fade-out-right 1s ease both);
+        }
+    }
 }
 
 #home {
-    @include max-widths(xlg) {
-        align-items: baseline;
-        overflow-y: auto;
-        .col-xlg-6 {
-            margin-bottom: 2em;
-        }
-        .container {
-            padding-top: 10em;
-            align-items: baseline;
-        }
-    }
     overflow: hidden;
-    background-color: #00BCD4;
+    background-color: $home-color;
     height: 100vh;
     display: flex;
-    align-items: center;
     .container {
         display: flex;
         align-items: center;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
+        @include max-widths(xlg) {
+            display: block;
+            margin-top: 8em;
+        }
+    }
+    .col-xlg-6 {
+        align-items: center;
     }
     .btn-link {
         color: #FFF;
     }
     #bio {
-        @include animation(fade-in 1s ease-in);
-        &.ng-hide {
-            @include animation(fade-out-left 1s ease);
+        @include max-widths(xlg) {
+            margin-bottom: 2em;
         }
     }
     #education {
-        @include animation(fade-in 1s ease-in both);
-        &.ng-hide {
-            @include animation(fade-out-right 1s ease);
-        }
         #courses {
             overflow: hidden;
             height: 22em;
@@ -91,7 +102,7 @@
                 .table-body {
                     background-color: #F5F5F5;
                     max-height: 15em;
-                    overflow-y: scroll;
+                    overflow-y: auto;
                     tr:first-of-type td {
                         border-top: 0;
                     }
@@ -110,51 +121,6 @@
             }
         }
     }
-    #projects {
-        @include response-widths(xlg) {
-            .card-sm {
-                height: 16.95em;
-            }
-        }
-        @include max-widths(xlg) {
-            padding-bottom: 5em;
-            .col-xlg-8, .col-xlg-4 {
-                margin-bottom: 2em;
-            }
-            .card {
-                overflow: hidden;
-                height: 30em;
-            }
-        }
-        @include max-widths(md) {
-            .card {
-                max-height: 20em;
-            }
-        }
-        @include max-widths(sm) {
-            .card {
-                max-height: 13em;
-            }
-        }
-        #yippee-card {
-            img {
-                transform: translate(12%, -7%);
-                width: 80%;
-            }
-        }
-        #primus-card {  
-            margin-top: 2em;
-        }
-    }
-}
-
-@for $i from 1 through 3 {
-    .card-#{$i} {
-        @include animation(zoom-in 400ms ease-in $i*0.3s both);
-    }
-    .card-#{$i}.ng-hide {
-        @include animation(zoom-out 400ms ease-in (4-$i)*0.3s);
-    }
 }
 
 .card {
@@ -168,7 +134,7 @@
         border: 0;
     }
     &.card-sm {
-        height: 19.75em;
+        height: 20.4em;
         overflow: hidden;
     }
     .card-img-overlay {

@@ -1,7 +1,7 @@
 .container {
     @include response-widths(xs) { width: 100%; }
-    @include response-widths(sm) { width: 45em; }
-    @include response-widths(md) { width: 50em; }
+    @include response-widths(sm) { width: 40em; }
+    @include response-widths(md) { width: 45em; }
     @include response-widths(lg) { width: 55em; }
     @include response-widths(xlg) { width: 70em; }
     @include response-widths(xxlg) { width: 80em; }

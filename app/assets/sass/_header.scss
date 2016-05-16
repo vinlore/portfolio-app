@@ -1,12 +1,51 @@
 .header {
-    position: fixed;
+    margin: 1em;
+    border-radius: 0.2em;
+    @include max-widths(xlg) {
+        background-color: $header-color;
+    }
+    @include max-widths(sm) {
+        background-color: transparent;
+    }
+    position: absolute;
     top: 0;
-}
-
-.header-inner {
-    padding: 2em 0;
-}
-
-.navbar-brand {
-    margin-bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    .navbar-brand {
+        margin-bottom: 0;
+    }
+    .navbar-right {
+        margin-right: 0;
+    }
+    .nav li a {
+        color: #333;
+        &:hover {
+            background-color: transparent;
+            font-weight: 600;
+            color: #F44336;
+        }
+        &:focus {
+            background-color: transparent;
+        }
+    }
+    .navbar-header {
+        @include max-widths(sm) {
+            background-color: $header-color;
+            border-radius: 0.2em 0.2em 0 0;
+        }
+    }
+    .navbar-toggle .icon-bar {
+        background-color: #333;
+    }
+    .navbar-collapse {
+        overflow: hidden;
+        @include max-widths(sm) {
+            opacity: 0;
+            background-color: #FFF;
+            &.in {
+                opacity: 1;
+            }
+        }
+    }
 }

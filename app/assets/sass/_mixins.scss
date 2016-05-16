@@ -24,22 +24,22 @@
 
 @mixin max-widths($width) {
     @if $width == xs {
-        @media (max-width: $screen-xs) { @content; }
+        @media (max-width: $screen-xs - 1) { @content; }
     }
     @else if $width == sm {
-        @media (max-width: $screen-sm) { @content; }
+        @media (max-width: $screen-sm - 1) { @content; }
     }
     @else if $width == md {
-        @media (max-width: $screen-md) { @content; }
+        @media (max-width: $screen-md - 1) { @content; }
     }
     @else if $width == lg {
-        @media (max-width: $screen-lg) { @content; }
+        @media (max-width: $screen-lg - 1) { @content; }
     }
     @else if $width == xlg {
-        @media (max-width: $screen-xlg) { @content; }
+        @media (max-width: $screen-xlg - 1) { @content; }
     }
     @else if $width == xxlg {
-        @media (max-width: $screen-xxlg) { @content; }
+        @media (max-width: $screen-xxlg - 1) { @content; }
     }
 }
 
@@ -75,7 +75,7 @@
     -webkit-animation: $animate;
     -moz-animation: $animate;
     -o-animation: $animate;
-    transition: $animate
+    animation: $animate;
 }
 
 @mixin transform($trans) {

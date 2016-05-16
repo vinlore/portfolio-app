@@ -1,6 +1,5 @@
 <section id="home" ng-init="vm.loadCourses()">
     <div class="container">
-    <div>
         <div class="col-xlg-6" id="bio" ng-show="vm.showBio">
             <h5>I'm a new UBC graduate specialized in front-end web development, with a great deal of experience using AngularJS. Currently, I'm seeking entry-level web development positions.</h5>
         </div>
@@ -47,35 +46,5 @@
                 </div>
             </div>
         </div>
-        </div>
-        <div id="projects">
-            <div class="col-xlg-8">
-                <div class="card card-1" id="huddle-card" ng-show="vm.showProjects">
-                    <img src="assets/img/huddle/home.png" class="card-img">
-                    <div class="card-img-overlay">
-                        <h4 class="card-title">Huddle</h4>
-                        <p class="card-text">Exceptionally flexible platform built for Gobind Sarvar, a non-for-profit learning institute, to manage their international conferences and events.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xlg-4">
-                <div class="card card-sm card-2" id="yippee-card" ng-show="vm.showProjects">
-                    <img src="assets/img/yippee/studytimer.png" class="card-img">
-                    <div class="card-img-overlay"> 
-                        <h4 class="card-title">Yippee</h4>
-                        <p class="card-text">An Ionic application that encourages you to live a healthy lifestyle by scheduling breaks into your busy schedule.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xlg-4">
-                <div class="card card-sm card-3" id="primus-card" ng-show="vm.showProjects">
-                    <img src="assets/img/primus/home.png" class="card-img">
-                    <div class="card-img-overlay">
-                        <h4 class="card-title">Primus</h4>
-                        <p class="card-text">Web application for simplifying administrative tasks at Datapi Learning Centre.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button id="project-btn" class="btn btn-block btn-link" ng-click="vm.toggleProjects()">Project Portfolio <span class="caret"></span></button>
+    </div>
 </section>
