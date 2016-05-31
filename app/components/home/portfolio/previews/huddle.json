@@ -1,0 +1,27 @@
+{
+    "images": [
+        "assets/img/huddle/home.png",
+        "assets/img/huddle/conference2.png",
+        "assets/img/huddle/admin.png",
+        "assets/img/huddle/conference-signup.png",
+        "assets/img/huddle/profile.png",
+        "assets/img/huddle/accounts.png",
+        "assets/img/huddle/activity.png",
+        "assets/img/huddle/publisher.png",
+        "assets/img/huddle/insights.png"
+    ],
+    "features": [
+        "Effortlessly organize conferences and events.",
+        "Create a profile with the ability to associate friends and relatives.",
+        "Sign up to attend conferences and events.",
+        "Flexible user permission management for administrators.",
+        "Graphical activity log detailing system changes.",
+        "Insightful graphs to summarize conference and event statistics."
+    ],
+    "features2": [
+        "DDOS protection.",
+        "Token-based authentication",
+        "Prevention against SQL injections.",
+        "Form validation front-end and back-end."
+    ]
+}

@@ -1,42 +1,27 @@
 #content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     &.ng-enter {
-        @include transition(opacity 1s ease-in 1.5s);
-        #home {
-            background-color: $portfolio-color;
-        }
+        @include transition(opacity 1s ease-out 1.5s);
         #bio {
-            @include animation(fade-in 1s ease-in 1.5s both);
+            @include animation(fade-in 1s ease-out 1.5s both);
         }
         #education {
-            @include animation(fade-in 1s ease-in 1.5s both);
-        }
-    }
-    &.ng-enter-active {
-        #home {
-            background-color: $home-color;
-            @include transition(background-color 500ms linear 1.3s);
+            @include animation(fade-in 1s ease-out 1.5s both);
         }
     }
     &.ng-leave {
-        @include transition(opacity 700ms ease);
-        @include transition(transform 700ms ease);
+        @include transition(opacity 700ms ease-in);
+        @include transition(transform 700ms ease-in);
         #bio {
-            @include animation(fade-out-left 1s ease both);
+            @include animation(fade-out-left 1s ease-in both);
         }
         #education {
-            @include animation(fade-out-right 1s ease both);
+            @include animation(fade-out-right 1s ease-in both);
         }
     }
 }
 
 #home {
     overflow: hidden;
-    background-color: $home-color;
     height: 100vh;
     display: flex;
     .container {
@@ -64,10 +49,10 @@
             overflow: hidden;
             height: 22em;
             padding: 0 0.2em;
-            @include transition(height 1s ease);
+            @include transition(height 1s ease-out);
             &.ng-hide {
                 height: 0em !important;
-                @include transition(height 1s ease);
+                @include transition(height 1s ease-in);
             }
             .nav-tabs {
                 border-bottom: 0;
@@ -119,37 +104,6 @@
                     }
                 }
             }
-        }
-    }
-}
-
-.card {
-    display: block;
-    position: relative;
-    background-color: #FFF;
-    @include card-shadow;
-    .card-img {
-        display: block;
-        width: 100%;
-        border: 0;
-    }
-    &.card-sm {
-        height: 20.4em;
-        overflow: hidden;
-    }
-    .card-img-overlay {
-        position: absolute;
-        background-color: rgba(51, 51, 51, 0.6);
-        color: #FFF;
-        padding: 1em;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        opacity: 0;
-        @include transition(opacity 0.3s ease-in);
-        &:hover {
-            opacity: 1;
         }
     }
 }

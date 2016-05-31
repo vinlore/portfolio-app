@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300);
 $font-family-base: 'Open Sans', sans-serif;
+$icon-font-path: "../libs/bootstrap-sass/assets/fonts/bootstrap/";
 
 $font-size-base: 14px !default;
 $font-size-lg: 1.25rem !default;
@@ -29,6 +30,7 @@ $container-lg: 71.25em;
 
 $card-box: 0px 3px 3px 0px rgba(94,94,94,0.8);
 
-$home-color: #00BCD4;
+$bg-color: #00BCD4;
 $header-color: #D9EDF7;
 $portfolio-color: #4CAF50;
+$previews-color: #F44336;

@@ -1,6 +1,6 @@
-app = angular.module('HomeCtrl', []);
+app = angular.module('BioCtrl', []);
 
-app.controller('HomeCtrl', function (filterFilter, $http, $timeout) {
+app.controller('BioCtrl', function (filterFilter, $http, $timeout) {
 
     var vm = this;
 
@@ -11,7 +11,7 @@ app.controller('HomeCtrl', function (filterFilter, $http, $timeout) {
     vm.showEducation = true;
 
     vm.loadCourses = function () {
-        $http.get('components/home/Courses.json').success(data => 
+        $http.get('components/home/bio/Courses.json').success(data => 
             vm.courses = data);
     };
 

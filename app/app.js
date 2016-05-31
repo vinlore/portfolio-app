@@ -4,7 +4,8 @@ angular.module('app', [
     'ui.router',
     'ui.bootstrap',
     'ngAnimate',
-    'HomeCtrl'
+    'BioCtrl',
+    'PreviewsCtrl'
 ])
 
 .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -18,18 +19,24 @@ angular.module('app', [
 
     .state('home.bio', {
         url: '/',
-        controller: 'HomeCtrl',
-        templateUrl: 'components/home/home.html',
+        controller: 'BioCtrl',
+        templateUrl: 'components/home/bio/bio.html',
         controllerAs: 'vm'
     })
 
     .state('home.portfolio', {
         url: '/portfolio',
-        templateUrl: 'components/home/portfolio.html'
+        templateUrl: 'components/home/portfolio/portfolio.html'
+    })
+
+    .state('home.preview', {
+        url: '/portfolio/:project',
+        templateUrl: 'components/home/portfolio/previews/previews.html',
+        controller: 'PreviewsCtrl',
+        controllerAs: 'vm'
     })
 
     $urlRouterProvider.otherwise('/');
 
-    $locationProvider.html5Mode(true);
 
 })
