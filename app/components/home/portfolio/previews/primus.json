@@ -1,0 +1,22 @@
+{
+    "title": "Primus",
+    "images": [
+        "assets/img/primus/home.png",
+        "assets/img/primus/printpayment.png",
+        "assets/img/primus/adminhome.png",
+        "assets/img/primus/adminstudents.png",
+        "assets/img/primus/admintracker.png",
+        "assets/img/primus/adminfinance.png",
+        "assets/img/primus/adminfinance2.png",
+        "assets/img/primus/adminstaff.png"
+    ],
+    "features": [
+        "Register and manage clients.",
+        "Keep track of client payments.",
+        "Generate various business-relevant, print-ready reports."
+    ],
+    "features2": [
+        "AngularJS framework.",
+        "Real-time Firebase backend."
+    ]
+}

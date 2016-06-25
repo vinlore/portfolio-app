@@ -1,10 +1,19 @@
 <section id="previews" ng-init="vm.loadProject()">
     <div class="container">
-        <uib-carousel active="0">
-            <uib-slide ng-repeat="i in vm.project.images track by $index" index="$index">
-                <img ng-src="{{i}}">
-            </uib-slide>
-        </uib-carousel>
+        <div class="carousel-card">
+            <uib-carousel active="0">
+                <uib-slide ng-repeat="i in vm.project.images track by $index" index="$index">
+                    <img ng-src="{{i}}">
+                </uib-slide>
+            </uib-carousel>
+            <div class="card">
+                <div class="card-text">
+                    <h4>{{vm.project.title}} -
+                        <a ui-sref="demo({project: vm.project.title.toLowerCase()})">Demo</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-6">
                 <div class="card">

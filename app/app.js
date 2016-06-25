@@ -5,7 +5,8 @@ angular.module('app', [
     'ui.bootstrap',
     'ngAnimate',
     'BioCtrl',
-    'PreviewsCtrl'
+    'PreviewsCtrl',
+    'DemoCtrl'
 ])
 
 .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -33,6 +34,13 @@ angular.module('app', [
         url: '/portfolio/:project',
         templateUrl: 'components/home/portfolio/previews/previews.html',
         controller: 'PreviewsCtrl',
+        controllerAs: 'vm'
+    })
+
+    .state('demo', {
+        url: '/demo/:project',
+        templateUrl: 'components/demo/demo.html',
+        controller: 'DemoCtrl',
         controllerAs: 'vm'
     })
 

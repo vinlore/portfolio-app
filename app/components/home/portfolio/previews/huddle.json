@@ -1,4 +1,5 @@
 {
+    "title": "Huddle",
     "images": [
         "assets/img/huddle/home.png",
         "assets/img/huddle/conference2.png",
@@ -20,8 +21,9 @@
     ],
     "features2": [
         "DDOS protection.",
-        "Token-based authentication",
+        "Token-based authentication.",
         "Prevention against SQL injections.",
-        "Form validation front-end and back-end."
+        "Form validation front-end and back-end.",
+        "Laravel and AngularJS framework."
     ]
 }
