@@ -8,8 +8,9 @@
             </uib-carousel>
             <div class="card">
                 <div class="card-text">
-                    <h4>{{vm.project.title}} -
-                        <a ui-sref="demo({project: vm.project.title.toLowerCase()})">Demo</a>
+                    <h4>{{vm.project.title}}
+                        <span ng-show="vm.project.github"> - </span>
+                        <a ng-href="{{vm.project.github}}" ng-show="vm.project.github">GitHub</a>
                     </h4>
                 </div>
             </div>
