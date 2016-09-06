@@ -11,11 +11,13 @@
                     <h4>{{vm.project.title}}
                         <span ng-show="vm.project.github"> - </span>
                         <a ng-href="{{vm.project.github}}" ng-show="vm.project.github">GitHub</a>
+                        <span ng-show="vm.project.demo"> - </span>
+                        <a ng-href="{{vm.project.demo}}" ng-show="vm.project.demo">Demo</a>
                     </h4>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="features">
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-text">

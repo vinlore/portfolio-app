@@ -1,12 +1,7 @@
 .header {
     margin: 1em;
     border-radius: 0.2em;
-    @include max-widths(xlg) {
-        background-color: $header-color;
-    }
-    @include max-widths(sm) {
-        background-color: transparent;
-    }
+    background-color: $header-color;
     position: absolute;
     top: 0;
     left: 0;

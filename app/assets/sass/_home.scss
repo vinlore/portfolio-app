@@ -1,21 +1,12 @@
 #content {
-    &.ng-enter {
-        @include transition(opacity 1s ease-out 1.5s);
-        #bio {
-            @include animation(fade-in 1s ease-out 1.5s both);
-        }
-        #education {
-            @include animation(fade-in 1s ease-out 1.5s both);
-        }
-    }
     &.ng-leave {
-        @include transition(opacity 700ms ease-in);
-        @include transition(transform 700ms ease-in);
+        @include transition(opacity 500ms ease-in);
+        @include transition(transform 500ms ease-in);
         #bio {
-            @include animation(fade-out-left 1s ease-in both);
+            @include animation(fade-out-left 700ms ease-in both);
         }
         #education {
-            @include animation(fade-out-right 1s ease-in both);
+            @include animation(fade-out-right 700ms ease-in both);
         }
     }
 }
@@ -40,19 +31,21 @@
         color: #FFF;
     }
     #bio {
+        @include animation(fade-in 500ms ease-out 1s both);
         @include max-widths(xlg) {
             margin-bottom: 2em;
         }
     }
     #education {
+        @include animation(fade-in 500ms ease-out 1s both);
         #courses {
             overflow: hidden;
             height: 22em;
             padding: 0 0.2em;
-            @include transition(height 1s ease-out);
+            @include transition(height 700ms ease-out);
             &.ng-hide {
                 height: 0em !important;
-                @include transition(height 1s ease-in);
+                @include transition(height 700ms ease-in);
             }
             .nav-tabs {
                 border-bottom: 0;

@@ -7,8 +7,10 @@
                     @include animation(fade-out 400ms ease-in 500ms both);
                 }
             }
-            .card {
-                @include animation(fade-out-down 700ms ease-in 400ms both);
+            #features {
+                .card {
+                    @include animation(fade-out-down 700ms ease-in 400ms both);
+                }
             }
         }
     }
@@ -36,6 +38,7 @@
             .card {
                 border-top: 1px solid #f5f5f5;
                 .card-text {
+                    padding: 1em;
                     text-align: center;
                     h4 {
                         margin-bottom: 0;
@@ -43,10 +46,12 @@
                 }
             }
         }
-        .card {
-            @include animation(fade-in-up 700ms ease-out 1.4s both);
-            .card-text {
-                padding: 1em;
+        #features {
+            .card {
+                @include animation(fade-in-up 700ms ease-out 1.4s both);
+                .card-text {
+                    padding: 1em;
+                }
             }
         }
     }

@@ -3,7 +3,7 @@
         &.ng-leave {
             #portfolio {
                 .card-#{$i} {
-                    @include animation(zoom-out 400ms ease-in (4-$i)*0.3s both);
+                    @include animation(zoom-out 400ms ease-in (4-$i)*0.2s both);
                 }
             }
         }
@@ -62,7 +62,7 @@
     }
     @for $i from 1 through 3 {
         .card-#{$i} {
-            @include animation(zoom-in 400ms ease-out 1s+$i*0.3s both);
+            @include animation(zoom-in 400ms ease-out 1s+$i*0.2s both);
         }
     }
 }
