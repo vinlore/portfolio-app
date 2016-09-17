@@ -1,6 +1,6 @@
 {
     "title": "Primus",
-    "demo": "primus.vincentlore.me",
+    "demo": "http://primus.vincentlore.me",
     "images": [
         "assets/img/primus/locations.png",
         "assets/img/primus/home.png",
@@ -9,12 +9,13 @@
         "assets/img/primus/adminstudents.png",
         "assets/img/primus/admintracker.png",
         "assets/img/primus/adminfinance.png",
-        "assets/img/primus/admintracker.png",
+        "assets/img/primus/admintracker.png"
     ],
     "features": [
+        "Oversee the operations of multiple business locations",
         "Register and manage clients.",
-        "Keep track of client payments.",
-        "Generate various business-relevant, print-ready reports."
+        "Gather information to track upcoming client payments.",
+        "Generate various business-relevant and print-ready reports."
     ],
     "features2": [
         "AngularJS framework.",
