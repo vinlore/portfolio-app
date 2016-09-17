@@ -5,6 +5,9 @@
         #bio {
             @include animation(fade-out-left 700ms ease-in both);
         }
+        hr {
+            @include animation(fade-out 500ms ease-in both);
+        }
         #education {
             @include animation(fade-out-right 700ms ease-in both);
         }
@@ -48,8 +51,27 @@
             margin-bottom: 2em;
         }
     }
+    hr {
+        @include animation(fade-in 500ms ease-in 1s both);
+        visibility: hidden;
+        @include max-widths(xlg) {
+            visibility: visible;
+        }
+    }
     #education {
+        @include max-widths(xlg) {
+            margin-top: 3em;
+        }
         @include animation(fade-in 500ms ease-out 1s both);
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .col-xs-9 {
+                width: auto;
+            }
+        }
+        
         #courses {
             width: 100%;
             overflow: hidden;
