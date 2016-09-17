@@ -2,14 +2,14 @@
     "title": "Primus",
     "demo": "primus.vincentlore.me",
     "images": [
+        "assets/img/primus/locations.png",
         "assets/img/primus/home.png",
         "assets/img/primus/printpayment.png",
         "assets/img/primus/adminhome.png",
         "assets/img/primus/adminstudents.png",
         "assets/img/primus/admintracker.png",
         "assets/img/primus/adminfinance.png",
-        "assets/img/primus/adminfinance2.png",
-        "assets/img/primus/adminstaff.png"
+        "assets/img/primus/admintracker.png",
     ],
     "features": [
         "Register and manage clients.",
