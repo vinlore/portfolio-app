@@ -1,7 +1,7 @@
 <section id="previews" ng-init="vm.loadProject()">
     <div class="container">
         <div class="carousel-card">
-            <uib-carousel active="0">
+            <uib-carousel active="0" interval="6000">
                 <uib-slide ng-repeat="i in vm.project.images track by $index" index="$index">
                     <img ng-src="{{i}}">
                 </uib-slide>

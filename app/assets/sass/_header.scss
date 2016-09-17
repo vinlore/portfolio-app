@@ -7,6 +7,7 @@
     left: 0;
     right: 0;
     z-index: 2;
+    color: #333;
     .navbar-brand {
         margin-bottom: 0;
     }
@@ -37,7 +38,7 @@
         overflow: hidden;
         @include max-widths(sm) {
             opacity: 0;
-            background-color: #FFF;
+            background-color: #f5f5f5;
             &.in {
                 opacity: 1;
             }

@@ -49,6 +49,12 @@
     box-shadow: $card-box;
 }
 
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
 @mixin transition($transit) {
     -webkit-transition: $transit;
     -moz-transition: $transit;
