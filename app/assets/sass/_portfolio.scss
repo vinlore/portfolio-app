@@ -1,4 +1,4 @@
-div[ui-view] {
+#content {
     @for $i from 1 through 3 {
         &.ng-leave {
             #portfolio {

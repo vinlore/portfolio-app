@@ -1,6 +1,6 @@
 app = angular.module('PreviewsCtrl', []);
 
-app.controller('PreviewsCtrl', function ($http, $stateParams, $state) {
+app.controller('PreviewsCtrl', function ($http, $stateParams) {
     
     var vm = this;
 
@@ -8,12 +8,8 @@ app.controller('PreviewsCtrl', function ($http, $stateParams, $state) {
 
     vm.loadProject = function () {
         var url = 'components/home/portfolio/previews/' + $stateParams.project + '.json';
-        $http.get(url)
-        .then((data) => {
-            vm.project = data.data
-        }, (error) => {
-            $state.go('portfolio');
-        })
+        $http.get(url).success(data =>
+            vm.project = data);
     };
 
 })

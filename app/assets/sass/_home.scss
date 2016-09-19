@@ -1,4 +1,4 @@
-div[ui-view] {
+#content {
     &.ng-leave {
         @include transition(opacity 500ms ease-in);
         @include transition(transform 500ms ease-in);
