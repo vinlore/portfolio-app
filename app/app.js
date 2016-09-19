@@ -14,37 +14,28 @@ angular.module('app', [
     $stateProvider
     .state('home', {
         url:'',
-        abstract: true,
-        templateUrl: 'shared/header.html'
-    })
-
-    .state('home.bio', {
-        url: '/',
         controller: 'BioCtrl',
         templateUrl: 'components/home/bio/bio.html',
         controllerAs: 'vm'
     })
 
-    .state('home.portfolio', {
+    .state('portfolio', {
         url: '/portfolio',
         templateUrl: 'components/home/portfolio/portfolio.html'
     })
 
-    .state('home.preview', {
+    .state('preview', {
         url: '/portfolio/:project',
         templateUrl: 'components/home/portfolio/previews/previews.html',
         controller: 'PreviewsCtrl',
         controllerAs: 'vm'
     })
 
-    .state('demo', {
-        url: '/demo/:project',
-        templateUrl: 'components/demo/demo.html',
-        controller: 'DemoCtrl',
-        controllerAs: 'vm'
+    .state('about', {
+        url: ''
     })
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('');
 
 
 })
