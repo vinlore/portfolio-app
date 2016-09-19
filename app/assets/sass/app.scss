@@ -10,9 +10,12 @@
 @import 'portfolio';
 @import 'previews';
 
-#content {
+body {
     background-color: $bg-color;
     overflow: auto;
+}
+
+div[ui-view] {
     position: absolute;
     top: 0;
     left: 0;
