@@ -9,6 +9,18 @@
     @include card-shadow;
     .navbar-brand {
         margin-bottom: 0;
+        a {
+            color: #333;
+            text-decoration: none;
+            &:focus,
+            &:hover {
+                color: #333;
+                text-decoration: none;
+            }
+            &:hover {
+                font-weight: 600;
+            }
+        }
     }
     .navbar-right {
         margin-right: 0;
