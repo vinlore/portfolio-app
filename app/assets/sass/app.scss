@@ -9,6 +9,7 @@
 @import 'home';
 @import 'portfolio';
 @import 'previews';
+@import 'about';
 
 body {
     background-color: $bg-color;
@@ -21,6 +22,10 @@ div[ui-view] {
     left: 0;
     right: 0;
     bottom: 0;
+    &.ng-leave {
+        @include transition(opacity 500ms ease-in);
+        @include transition(transform 500ms ease-in);
+    }
 }
 
 .card {

@@ -32,7 +32,8 @@ angular.module('app', [
     })
 
     .state('about', {
-        url: ''
+        url: '/about',
+        templateUrl: 'components/about/about.html'
     })
 
     $urlRouterProvider.otherwise('');
