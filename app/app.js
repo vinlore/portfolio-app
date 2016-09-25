@@ -5,15 +5,14 @@ angular.module('app', [
     'ui.bootstrap',
     'ngAnimate',
     'BioCtrl',
-    'PreviewsCtrl',
-    'DemoCtrl'
+    'PreviewsCtrl'
 ])
 
 .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
     $stateProvider
     .state('home', {
-        url:'',
+        url:'/',
         controller: 'BioCtrl',
         templateUrl: 'components/home/bio/bio.html',
         controllerAs: 'vm'
@@ -21,12 +20,12 @@ angular.module('app', [
 
     .state('portfolio', {
         url: '/portfolio',
-        templateUrl: 'components/home/portfolio/portfolio.html'
+        templateUrl: 'components/portfolio/portfolio.html'
     })
 
     .state('preview', {
         url: '/portfolio/:project',
-        templateUrl: 'components/home/portfolio/previews/previews.html',
+        templateUrl: 'components/previews/previews.html',
         controller: 'PreviewsCtrl',
         controllerAs: 'vm'
     })
@@ -36,7 +35,8 @@ angular.module('app', [
         templateUrl: 'components/about/about.html'
     })
 
-    $urlRouterProvider.otherwise('');
+    $urlRouterProvider.otherwise('/');
 
+    $locationProvider.html5Mode(true);
 
 })

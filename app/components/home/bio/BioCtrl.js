@@ -7,8 +7,6 @@ app.controller('BioCtrl', function (filterFilter, $http, $timeout) {
     vm.queryCourses = '';
     vm.courses = [];
     vm.showCourses = true;
-    vm.showBio = true;
-    vm.showEducation = true;
 
     vm.loadCourses = function () {
         $http.get('components/home/bio/Courses.json').success(data => 
