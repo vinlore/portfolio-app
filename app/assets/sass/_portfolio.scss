@@ -1,7 +1,7 @@
 div[ui-view] {
-    @for $i from 1 through 3 {
-        &.ng-leave {
-            #portfolio {
+    &.ng-leave {
+        #portfolio {
+            @for $i from 1 through 3 {
                 .card-#{$i} {
                     @include animation(zoom-out 400ms ease-in (4-$i)*0.2s both);
                 }
