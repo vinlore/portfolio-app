@@ -5,6 +5,7 @@ angular.module('app', [
     'ui.bootstrap',
     'ngAnimate',
     'BioCtrl',
+    'PortfolioCtrl',
     'PreviewsCtrl'
 ])
 
@@ -20,7 +21,9 @@ angular.module('app', [
 
     .state('portfolio', {
         url: '/portfolio',
-        templateUrl: 'components/portfolio/portfolio.html'
+        templateUrl: 'components/portfolio/portfolio.html',
+        controller: 'PortfolioCtrl',
+        controllerAs: 'vm'
     })
 
     .state('preview', {
@@ -38,5 +41,4 @@ angular.module('app', [
     $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);
-
 })

@@ -1,0 +1,24 @@
+[{
+    "name": "datapi",
+    "title": "DataPi Home Page",
+    "description": "Modernized home page for DataPi Learning Centre. Built from scratch using AngularJS and Bootstrap CSS.",
+    "img": "assets/img/datapi/home.png",
+    "url": "http://datapi.vincentlore.me"
+}, {
+    "name": "primus",
+    "title": "Primus",
+    "description": "Web application for simplifying administrative tasks at Datapi Learning Centre. Utilizes Firebase, a realtime database and backend on the cloud, to allow for data access from virtually anywhere.",
+    "img": "assets/img/primus/home.png"
+}, {
+    "name": "huddle",
+    "title": "Huddle",
+    "description": "Exceptionally flexible platform built for Gobind Sarvar, a non-for-profit learning institute, to manage their international conferences and events. ",
+    "img": "assets/img/huddle/home.png",
+    "url": "http://huddle.vincentlore.me"
+}, {
+    "name": "yippee",
+    "title": "Yippee",
+    "description": "A hybrid mobile application that encourages users to live a healthy lifestyle by scheduling regular breaks into their busy schedules. Includes chat functionality to communicate and organize break destinations, using the integrated Yelp API, with other users.",
+    "img": "assets/img/yippee/studytimer.png",
+    "url": "http://yippee.vincentlore.me"
+}]

@@ -1,8 +1,8 @@
 div[ui-view] {
     &.ng-leave {
         #portfolio {
-            @for $i from 1 through 3 {
-                .card-#{$i} {
+            @for $i from 1 through 4 {
+                .col-xlg-6:nth-of-type(#{$i}) .card {
                     @include animation(zoom-out 400ms ease-in (4-$i)*0.2s both);
                 }
             }
@@ -13,8 +13,16 @@ div[ui-view] {
 #portfolio {
     @include max-widths(xlg) {
         align-items: baseline;
+        padding-top: 0em;
+        padding-bottom: 5em;
         .col-xlg-6 {
             margin-bottom: 2em;
+            padding-left: 1em !important;
+            padding-right: 1em !important;
+        }
+        .card {
+            overflow: hidden;
+            height: 30em;
         }
         .container {
             padding-top: 8em;
@@ -23,23 +31,14 @@ div[ui-view] {
     }
     height: 100vh;
     display: flex;
-    padding-top: 7em;
-    @include response-widths(xlg) {
-        .card-sm {
-            height: 17.58em;
-        }
+    align-items: center;
+    .col-xlg-6 {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
-    @include max-widths(xlg) {
-        padding-top: 0em;
-        padding-bottom: 5em;
-        .col-xlg-8,
-        .col-xlg-4 {
-            margin-bottom: 2em;
-        }
-        .card {
-            overflow: hidden;
-            height: 30em;
-        }
+    .card {
+        height: 25em;
+        overflow: hidden;
     }
     @include max-widths(md) {
         .card {
@@ -51,17 +50,8 @@ div[ui-view] {
             max-height: 13em;
         }
     }
-    #yippee-card {
-        img {
-            transform: translate(12%, -7%);
-            width: 80%;
-        }
-    }
-    #primus-card {
-        margin-top: 1em;
-    }
-    @for $i from 1 through 3 {
-        .card-#{$i} {
+    @for $i from 1 through 4 {
+        .col-xlg-6:nth-of-type(#{$i}) .card {
             @include animation(zoom-in 400ms ease-out 1s+$i*0.2s both);
         }
     }

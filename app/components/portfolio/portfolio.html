@@ -1,30 +1,12 @@
-<section id="portfolio">
+<section id="portfolio" ng-init="vm.loadPortfolio()">
     <div class="container">
         <div class="row">
-            <div class="col-xlg-8">
-                <a class="card card-1" id="huddle-card" ui-sref="preview({project: 'huddle'})">
-                    <img src="assets/img/huddle/home.png" class="card-img">
+            <div class="col-xlg-6" ng-repeat="p in vm.portfolio">
+                <a class="card" id="{{p.name}}-card" ui-sref="preview({project: '{{p.name}}'})">
+                    <img ng-src="{{p.img}}" class="card-img">
                     <div class="card-img-overlay">
-                        <h4 class="card-title">Huddle</h4>
-                        <p class="card-text">Exceptionally flexible platform built for Gobind Sarvar, a non-for-profit learning institute, to manage their international conferences and events.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xlg-4">
-                <a class="card card-sm card-2" id="yippee-card" ui-sref="preview({project: 'yippee'})">
-                    <img src="assets/img/yippee/studytimer.png" class="card-img">
-                    <div class="card-img-overlay">
-                        <h4 class="card-title">Yippee</h4>
-                        <p class="card-text">An Ionic application that encourages you to live a healthy lifestyle by scheduling breaks into your busy schedule.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xlg-4">
-                <a class="card card-sm card-3" id="primus-card" ui-sref="preview({project: 'primus'})">
-                    <img src="assets/img/primus/home.png" class="card-img">
-                    <div class="card-img-overlay">
-                        <h4 class="card-title">Primus</h4>
-                        <p class="card-text">Web application for simplifying administrative tasks at Datapi Learning Centre.</p>
+                        <h4 class="card-title">{{p.title}}</h4>
+                        <p class="card-text">{{p.description}}</p>
                     </div>
                 </a>
             </div>
