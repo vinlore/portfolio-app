@@ -1,0 +1,17 @@
+{
+    "title": "DataPi Home Page",
+    "demo": "http://datapi.vincentlore.me",
+    "images": [
+        "assets/img/datapi/home.png",
+        "assets/img/datapi/about.png",
+        "assets/img/datapi/careers.png",
+        "assets/img/datapi/contact.png",
+        "assets/img/datapi/litmaster.png",
+        "assets/img/datapi/boostik.png"
+    ],
+    "features": [
+        "Modern and responsive web page for DataPi Learning Centre.",
+        "Support for multiple language switching on the fly.",
+        "Google Maps integration, including directions from current location."
+    ]
+}
