@@ -20,10 +20,6 @@ div[ui-view] {
             padding-left: 1em !important;
             padding-right: 1em !important;
         }
-        .card {
-            overflow: hidden;
-            height: 30em;
-        }
         .container {
             padding-top: 8em;
             align-items: baseline;
@@ -39,15 +35,17 @@ div[ui-view] {
     .card {
         height: 25em;
         overflow: hidden;
-    }
-    @include max-widths(md) {
-        .card {
+        @include max-widths(xlg) {
+            max-height: 35em;
+        }
+        @include max-widths(md) {
+            max-height: 25em;
+        }
+        @include max-widths(sm) {
             max-height: 20em;
         }
-    }
-    @include max-widths(sm) {
-        .card {
-            max-height: 13em;
+        @include max-widths(xs) {
+            max-height: 15em;
         }
     }
     @for $i from 1 through 4 {

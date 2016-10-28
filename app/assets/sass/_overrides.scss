@@ -1,6 +1,6 @@
 .container {
     @include response-widths(xs) { width: 100%; }
-    @include response-widths(sm) { width: 40em; }
+    @include response-widths(sm) { width: 35em; }
     @include response-widths(md) { width: 45em; }
     @include response-widths(lg) { width: 55em; }
     @include response-widths(xlg) { width: 70em; }
