@@ -11,13 +11,13 @@
         "assets/img/primus/admintracker.png"
     ],
     "features": [
-        "Oversee the operations of multiple business locations",
         "Register and manage clients.",
-        "Gather information to track upcoming client payments.",
-        "Generate various business-relevant and print-ready reports."
+        "Monitor the operation of multiple branch locations.",
+        "Track and calculate staff commission earnings.",
+        "Generate various business-specific and print-friendly reports."
     ],
     "features2": [
         "AngularJS framework.",
-        "Real-time Firebase backend."
+        "Real-time Firebase database and backend."
     ]
 }
