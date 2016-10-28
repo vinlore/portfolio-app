@@ -7,7 +7,7 @@
 }, {
     "name": "primus",
     "title": "Primus",
-    "description": "Web application for simplifying administrative tasks at Datapi Learning Centre. Utilizes Firebase, a realtime database and backend on the cloud, to allow for data access from virtually anywhere.",
+    "description": "Web application for simplifying administrative tasks at Datapi Learning Centre. Utilizes Firebase, a real-time database and backend on the cloud, to allow for data access from virtually anywhere.",
     "img": "assets/img/primus/home.png"
 }, {
     "name": "huddle",
