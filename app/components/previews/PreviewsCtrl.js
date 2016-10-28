@@ -4,7 +4,7 @@ app.controller('PreviewsCtrl', function ($http, $stateParams, $state) {
     
     var vm = this;
 
-    vm.project = {};
+    vm.project = null;
 
     vm.loadProject = function () {
         var url = 'components/previews/' + $stateParams.project + '.json';

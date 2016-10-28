@@ -1,5 +1,5 @@
 <section id="previews" ng-init="vm.loadProject()">
-    <div class="container">
+    <div class="container" ng-if="vm.project">
         <div class="carousel-card">
             <uib-carousel active="0" interval="6000">
                 <uib-slide ng-repeat="i in vm.project.images track by $index" index="$index">
@@ -18,14 +18,14 @@
             </div>
         </div>
         <div class="row" id="features">
-            <div class="col-lg-6">
+            <div ng-class="{'col-lg-6': vm.project.features2, 'col-lg-12': !vm.project.features2}">
                 <div class="card">
                     <div class="card-text">
                         <p ng-repeat="f in vm.project.features">{{f}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" ng-if="vm.project.features2">
                 <div class="card">
                     <div class="card-text">
                         <p ng-repeat="f in vm.project.features2">{{f}}</p>
