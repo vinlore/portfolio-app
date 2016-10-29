@@ -8,12 +8,31 @@ h6, .h6 {
     margin-bottom: 0.5em;
 }
 
-p {
-    font-size: $font-size-xlg;
-    @include max-widths(lg) {
-        font-size: $font-size-lg;
+@for $i from 1 through 6 {
+    h#{$i}, .h#{$i} {
+        @include response-widths(lg) {
+            font-size: nth($header-font, $i) * 1.5 !important;
+        }
+        @include response-widths(md) {
+            font-size: nth($header-font, $i) * 1.2 !important;
+        }
+        @include response-widths(sm) {
+            font-size: nth($header-font, $i) * 1.1 !important;
+        }
     }
-    @include max-widths(sm) {
-        font-size: $font-size-sm;
+}
+
+p {
+    @include response-widths(xs) {
+        font-size: 1em;
+    }
+    @include response-widths(sm) {
+        font-size: 1.1em;
+    }
+    @include response-widths(md) {
+        font-size: 1.2em;
+    }
+    @include response-widths(lg) {
+        font-size: 1.3em;
     }
 }

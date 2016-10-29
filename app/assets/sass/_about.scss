@@ -11,16 +11,23 @@ div[ui-view] {
 #about {
     .container {
         margin-top: 6em;
+        @include max-widths(xlg) {
+            width: 100%;
+        }
         .card {
             @include animation(zoom-in 700ms ease-out 700ms both);
             .card-img {
                 overflow: hidden;
+                max-height: 30em;
                 img {
                     width: 100%
                 }
             }
             .card-text {
                 padding: 2em;
+                @include max-widths(lg) {
+                    padding: 1em;
+                }
             }
         }
     }

@@ -21,11 +21,14 @@ div[ui-view] {
     display: flex;
     .container {
         margin-top: 6em;
+        @include response-widths(md) {
+            margin-top: 7em;
+        }
         .carousel-card {
             @include animation(fade-in-down 700ms ease-out 1.4s both);
             .carousel {
                 .carousel-inner {
-                    height: 40em;
+                    height: 35em;
                     background-color: #f5f5f5;
                     @include card-shadow;
                     img {
@@ -34,10 +37,10 @@ div[ui-view] {
                         margin-right: auto;
                     }
                     @include max-widths(lg) {
-                        height: 35em;
+                        height: 30em;
                     }
                     @include max-widths(md) {
-                        height: 30em;
+                        height: 25em;
                     }
                     @include max-widths(sm) {
                         height: auto;

@@ -15,7 +15,7 @@ div[ui-view] {
 }
 
 #home {
-    overflow: hidden;
+    overflow: auto;
     height: 100vh;
     display: flex;
     .container {
@@ -46,6 +46,7 @@ div[ui-view] {
         }
     }
     #bio {
+        text-align: center;
         @include animation(fade-in 500ms ease-out 1s both);
         @include max-widths(xlg) {
             margin-bottom: 2em;
@@ -67,8 +68,21 @@ div[ui-view] {
             display: flex;
             justify-content: center;
             align-items: center;
-            .col-xs-9 {
+            flex-flow: row wrap;
+            .col-md-9 {
                 width: auto;
+                @include max-widths(md) {
+                    padding: 0;
+                    text-align: center;
+                }
+            }
+            .col-md-3 {
+                @include max-widths(md) {
+                    width: 50%;
+                    img {
+                        margin-bottom: 1em;
+                    }
+                }
             }
         }
         #courses {
@@ -77,6 +91,12 @@ div[ui-view] {
             height: 22em;
             padding: 0 0.2em;
             @include transition(height 700ms ease-out);
+            @include max-widths(sm) {
+                width: 115%;
+            }
+            @include max-widths(xs) {
+                width: 125%;
+            }
             &.ng-hide {
                 height: 0em !important;
                 @include transition(height 700ms ease-in);
@@ -93,6 +113,9 @@ div[ui-view] {
                         color: #333;
                         cursor: pointer;
                         background-color: #F5F5F5;
+                    }
+                    @include max-widths(xs) {
+                        padding: 0.5em;
                     }
                 }
                 .active {

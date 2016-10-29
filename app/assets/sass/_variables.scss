@@ -2,20 +2,22 @@
 $font-family-base: 'Open Sans', sans-serif;
 $icon-font-path: "../libs/bootstrap-sass/assets/fonts/bootstrap/";
 
-$font-size-base: 14px !default;
-$font-size-xlg: 1.5rem !default;
-$font-size-lg: 1.25rem !default;
-$font-size-sm: .875rem !default;
-$font-size-xs: .75rem !default;
+$font-size-base: 16px !default;
+$font-size-xlg: 1.5em !default;
+$font-size-lg: 1.25em !default;
+$font-size-sm: .875em !default;
+$font-size-xs: .75em !default;
 
-$font-size-h1: 4rem !default;
-$font-size-h2: 3rem !default;
-$font-size-h3: 2.5rem !default;
-$font-size-h4: 2rem !default;
-$font-size-h5: 1.75rem !default;
-$font-size-h6: 1.5rem !default;
+$header-font: 2em 1.5em 1.4em 1.3em 1.2em 1.15em;
 
-$grid-breakpoints: ( xs: 320px, sm: 481px, md: 641px, lg: 768px, xl: 1025px, xxl: 1281px, wd: 1824px) !default;
+$font-size-h1: 2em !default;
+$font-size-h2: 1.5em !default;
+$font-size-h3: 1.3em !default;
+$font-size-h4: 1.2em !default;
+$font-size-h5: 1.15em !default;
+$font-size-h6: 1.1em !default;
+
+$grid-breakpoints: ( xs: 320px, sm: 481px, md: 641px, lg: 861px, xl: 1025px, xxl: 1281px, wd: 1824px) !default;
 
 $screen-xs: map-get($grid-breakpoints, xs);
 $screen-sm: map-get($grid-breakpoints, sm);
@@ -35,3 +37,5 @@ $bg-color: #B2EBF2;
 $header-color: #ffffff;
 $portfolio-color: #4CAF50;
 $previews-color: #F44336;
+
+$grid-float-breakpoint: $screen-md;

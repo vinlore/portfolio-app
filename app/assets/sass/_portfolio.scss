@@ -15,22 +15,29 @@ div[ui-view] {
         align-items: baseline;
         padding-top: 0em;
         padding-bottom: 5em;
-        .col-xlg-6 {
-            margin-bottom: 2em;
-            padding-left: 1em !important;
-            padding-right: 1em !important;
-        }
-        .container {
-            padding-top: 8em;
-            align-items: baseline;
-        }
     }
     height: 100vh;
     display: flex;
     align-items: center;
+    .container {
+        padding-top: 6em;
+        @include max-widths(md) {
+            padding-top: 5em;
+        }
+        @include response-widths(wd) {
+            padding-top: 3em;
+        }
+    }
     .col-xlg-6 {
         padding-left: 0.5em;
         padding-right: 0.5em;
+        @include max-widths(xlg) {
+            padding-left: 1em !important;
+            padding-right: 1em !important;
+        }
+        @include max-widths(md) {
+            margin-bottom: 0em;
+        }
     }
     .card {
         height: 25em;
