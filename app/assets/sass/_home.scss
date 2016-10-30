@@ -24,7 +24,7 @@ div[ui-view] {
         flex-flow: row wrap;
         @include max-widths(xlg) {
             display: block;
-            margin-top: 8em;
+            margin-top: 7em;
         }
     }
     .col-xlg-6 {
@@ -62,6 +62,7 @@ div[ui-view] {
     #education {
         @include max-widths(xlg) {
             margin-top: 3em;
+            margin-bottom: 3em;
         }
         @include animation(fade-in 500ms ease-out 1s both);
         .row {
