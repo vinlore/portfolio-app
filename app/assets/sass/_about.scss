@@ -17,10 +17,17 @@ div[ui-view] {
         .card {
             @include animation(zoom-in 700ms ease-out 700ms both);
             .card-img {
-                overflow: hidden;
-                max-height: 30em;
-                img {
-                    width: 100%
+                background-image: url("../img/profile.jpg");
+                background-size: cover;
+                background-position: center;
+                height: 30em;
+                @include max-widths(md) {
+                    background-position: 80% center;
+                }
+                @include max-widths(sm) {
+                    height: 20em;
+                    background-image: url("../img/profile-sm.jpg");
+                    background-position: center 20%;
                 }
             }
             .card-text {
