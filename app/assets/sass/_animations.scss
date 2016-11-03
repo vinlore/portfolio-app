@@ -54,3 +54,9 @@
     from { opacity: 1; @include transform(none); }
     to { opacity: 0; @include transform(translate3d(0,100%,0)); }
 }
+
+@include keyframes(fade-zoom-out) {
+    from { opacity: 1 }
+    50% { transform: scale3d(0.3,0.3,0.3); opacity: 0; }
+    to { opacity: 0; }
+}

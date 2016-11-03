@@ -4,8 +4,12 @@ div[ui-view] {
             #bio {
                 @include animation(fade-out-left 700ms ease-in both);
             }
-            hr {
-                @include animation(fade-out 500ms ease-in both);
+            #links {
+@for $i from 1 through 3 {
+    .btn:nth-of-type(#{$i}) {
+        @include animation(fade-zoom-out 300ms ease-in 0s+(3-$i)*0.2s both )
+    }
+            }
             }
             #education {
                 @include animation(fade-out-right 700ms ease-in both);
@@ -27,7 +31,7 @@ div[ui-view] {
             margin-top: 7em;
         }
     }
-    .col-xlg-6 {
+    .col-xlg-5 {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
@@ -46,17 +50,38 @@ div[ui-view] {
         }
     }
     #bio {
-        text-align: center;
+        align-items: flex-end;
         @include animation(fade-in 500ms ease-out 1s both);
         @include max-widths(xlg) {
             margin-bottom: 2em;
+            align-items: center;
         }
     }
-    hr {
-        @include animation(fade-in 500ms ease-in 1s both);
-        visibility: hidden;
-        @include max-widths(xlg) {
-            visibility: visible;
+    #links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column wrap;
+        .btn {
+            text-align: left;
+            color: #333;
+            background-color: transparent;
+            font-size: 1.4em;
+            min-width: 8em;
+            padding: 0.3em 1em;
+            i {
+                margin-right: 0.5em;
+                font-size: 1em;
+                vertical-align: middle;
+            }
+            &:hover {
+                background-color: rgba(0,0,0,0.15);
+            }
+        }
+        @for $i from 1 through 3 {
+            .btn:nth-of-type(#{$i}) {
+                @include animation(fade-in 400ms ease-out 1.2s+$i*0.2s both);
+            }
         }
     }
     #education {
@@ -64,10 +89,10 @@ div[ui-view] {
             margin-top: 3em;
             margin-bottom: 3em;
         }
-        @include animation(fade-in 500ms ease-out 1s both);
+        @include animation(fade-in 500ms ease-out 2s both);
         .row {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             flex-flow: row wrap;
             .col-md-9 {
@@ -84,6 +109,9 @@ div[ui-view] {
                         margin-bottom: 1em;
                     }
                 }
+            }
+            @include max-widths(xlg) {
+                justify-content: center;
             }
         }
         #courses {
