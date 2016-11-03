@@ -24,14 +24,6 @@
         a {
             color: #333;
             text-decoration: none;
-            &:focus,
-            &:hover {
-                color: #333;
-                text-decoration: none;
-            }
-            &:hover {
-                font-weight: 600;
-            }
         }
     }
     .navbar-toggle {
