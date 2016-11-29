@@ -20,7 +20,18 @@ div[ui-view] {
     display: flex;
     align-items: center;
     .container {
-        padding-top: 6em;
+        @include response-widths(xxlg) {
+            padding-top: 16em;
+        }
+        @include response-widths(xlg) {
+            padding-top: 16em;
+        }
+        @include response-widths(lg) {
+            padding-top: 6em;
+        }
+        @include response-widths(md) {
+            padding-top: 6em;
+        }
         @include max-widths(md) {
             padding-top: 5em;
         }
